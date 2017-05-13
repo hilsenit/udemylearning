@@ -13,6 +13,7 @@ Things you may want to cover:
 - Blog portfolio drag-and-drop
 
 ###Codeexample
+
 ´´´ruby
 def my_great_method 
 	puts "Here it is"
@@ -21,7 +22,7 @@ end
 
 ´´´javascript
 alert('hi there')
-´´
+´´´
 
 Ruby 2.4.0 
 * Ruby version
