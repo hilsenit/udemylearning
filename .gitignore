@@ -13,4 +13,4 @@
 /tmp
 
 # I don't want to show my secret 
-/config/secrets.yml
+/config/secrets.yml 
