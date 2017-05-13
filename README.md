@@ -14,15 +14,15 @@ Things you may want to cover:
 
 ###Codeexample
 
-´´´ruby
+```ruby
 def my_great_method 
 	puts "Here it is"
 end
-´´´
+```
 
-´´´javascript
+```javascript
 alert('hi there')
-´´´
+``
 
 Ruby 2.4.0 
 * Ruby version
