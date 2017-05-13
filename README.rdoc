@@ -1,12 +1,29 @@
 == README
 
 
-Dette er min fil
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
 
+> This is a ruby on rails 5 application that allows users to create their own portfolio.
+### Features 
+
+- Real time chatengine for comments
+- Blog portfolio drag-and-drop
+
+###Codeexample
+´´´ruby
+def my_great_method 
+	puts "Here it is"
+end
+´´´
+
+´´´javascript
+alert('hi there')
+´´
+
+Ruby 2.4.0 
 * Ruby version
 
 * System dependencies
