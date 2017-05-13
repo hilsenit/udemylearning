@@ -22,7 +22,7 @@ end
 
 ```javascript
 alert('hi there')
-``
+```
 
 Ruby 2.4.0 
 * Ruby version
