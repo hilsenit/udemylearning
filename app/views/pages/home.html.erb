@@ -1,0 +1,13 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+<div class="row">
+	<div class="column large-12">
+		<% @posts.each do |post| %>
+
+			<p><%= post.title %></p>
+
+		<% end %>
+
+
+	</div>
+</div>
