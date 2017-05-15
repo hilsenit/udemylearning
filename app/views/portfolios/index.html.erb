@@ -1,0 +1,11 @@
+<h1>Portfolio items</h1>
+
+<% @portfolios_items.each_with_index do |item, num| %>
+		<p><strong><%= item.title %></strong></p>
+		<p><%= item.subtitle %></p>
+		<%= image_tag item.thumb_image %>
+<% end %>
+
+
+
+
