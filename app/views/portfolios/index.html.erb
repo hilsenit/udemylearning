@@ -1,7 +1,7 @@
 <h1>Portfolio items</h1>
 <%= link_to "Opret nyt item", new_portfolio_path, class: "button warning" %>
 <% @portfolios_items.each_with_index do |item, num| %>
-		<%= link_to portfolio_path(item) do %>
+		<%= link_to show_portfolio_path(item), method: :get do %>
 			<p><strong><%= item.title %></strong></p>
 			<p><%= item.subtitle %></p>
 			<%= image_tag item.thumb_image unless item.thumb_image.nil? %>
