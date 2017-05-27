@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "contact" => "pages#contact"
 
   resources :blogs
+  get ":id/change_status" => "blogs#toggle_status", as: "toggle_status"
 
   resources :portfolios, except: [:show] 
   #Now i can create my own show-action with singular portfolio in URL
