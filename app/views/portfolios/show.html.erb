@@ -3,4 +3,10 @@
 <h2><%= @portfolio_item.title %></h2>
 
 <p><%= @portfolio_item.body %></p>
+
+<h2>Used Tech</h2>
+
+<% @portfolio_item.technologies.each do |item| %>
+	<p><%= item.name %></p>
+<% end %>
 <%= link_to "Gå tilbage til oversigt", portfolios_path, class: "button primary" %>
