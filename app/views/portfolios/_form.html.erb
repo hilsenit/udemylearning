@@ -10,6 +10,16 @@
 <%= f.text_area :body %>
 
 <%= f.label :main_image, "Tilføj billede" %>
+<%= f.file_field :main_image %>
+
+<ul>
+	<%= f.fields_for :technologies do |tec_form| %> 
+		<li>
+		<%= tec_form.label :name %>
+		<%= tec_form.text_field :name %>
+		</li>
+	<% end %>
+</ul>
 
 
 <%= f.submit "Tilføj", class: "button" %>
