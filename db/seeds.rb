@@ -55,3 +55,11 @@ end
 
 
 puts "#{Portfolio.all.length} portfolio items created"
+
+
+
+3.times do |technology|
+	Portfolio.last.technologies.create!(name: "Rails #{technology}")
+end 
+
+puts "#{Technology.all.length} technologies"
