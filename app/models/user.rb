@@ -10,4 +10,16 @@ class User < ApplicationRecord
   #:omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  # Vi skal bruge navnet, så vi er sikre på, at det blive skrevet i new
+  validates :name, presence: true
+
+  def first_name
+    self.name.split.first
+  end
+
+
+  def last_name
+    self.name.split[1..-1].join(" ")
+  end
 end
