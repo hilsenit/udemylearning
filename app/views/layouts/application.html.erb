@@ -12,6 +12,12 @@
 </head>
 
 <body>
+<% if current_user %>
+  <%= link_to "Log ud", destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to "Log ind", new_user_session_path %>
+<% end %>
+
   <div class="row">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
