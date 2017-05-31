@@ -12,7 +12,8 @@
 </head>
 
 <body>
-  <% if current_user %>
+
+  <% if current_user.is_a?(User) %>
   <%= link_to "Log ud", destroy_user_session_path, method: :delete %>
   <% else %>
   <%= link_to "Log ind", new_user_session_path %>

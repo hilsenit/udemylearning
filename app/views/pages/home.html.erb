@@ -1,9 +1,6 @@
 <h1>Pages#home</h1>
 <h2>
-<% if current_user %>
-	<h2>Hey <%= current_user.first_name %></h2>
-	<h3><%= current_user.last_name %></h3>
-<% end %>
+Hi, <%= current_user.name if current_user %>
 </h2>
 <div class="row">
 	<div class="column large-12">
