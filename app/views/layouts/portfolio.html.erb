@@ -14,12 +14,7 @@
 <body>
 <%= render partial: "shared/navbar", locals: {location: "middle"} %>
 
-  <% if current_user.is_a?(User) %>
-  <%= link_to "Log ud", destroy_user_session_path, method: :delete, class: "button primary" %>
-  <% else %>
-  <%= link_to "Log ind", new_user_session_path, class: "button primary" %>
-  <% end %>
-
+<%= login_helper %>
   <div class="row">
     <% if session[:source] %>
     <p>Thanks for visiting me from <%= session[:source] %></p>
