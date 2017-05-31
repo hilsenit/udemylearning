@@ -10,8 +10,8 @@ Rails.application.routes.draw do
 
   resources :portfolios, except: [:show] 
   #Now i can create my own show-action with singular portfolio in URL
-  get "portfolio/:id" => "portfolios#show", as: "show_portfolio"
   get "angular-items" => "portfolios#angular", as: "angular_items"
+  get "portfolio/:id" => "portfolios#show", as: "show_portfolio"
 
   root "pages#home"
 

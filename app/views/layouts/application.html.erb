@@ -12,17 +12,19 @@
 </head>
 
 <body>
-<% if current_user %>
+  <% if current_user %>
   <%= link_to "Log ud", destroy_user_session_path, method: :delete %>
-<% else %>
+  <% else %>
   <%= link_to "Log ind", new_user_session_path %>
-<% end %>
+  <% end %>
 
   <div class="row">
+  <% if session[:source] %>
+  <p>Thanks for visiting me from <%= session[:source] %></p>
+  <% end %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+  <%= yield %>
   </div>
-
 </body>
 </html>
