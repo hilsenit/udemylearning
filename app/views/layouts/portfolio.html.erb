@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title><%= @page_title %></title>
+  <meta name="keywords" content="<%= @seo_keywords %>" />
+  <%= stylesheet_link_tag    "portfolios" %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <div>
+    <%= link_to "Home", root_path, class: "button secondary" %>
+    <%= link_to "Om", about_path, class: "button secondary" %>
+    <%= link_to "Kontakt", contact_path, class: "button secondary" %>
+    <%= link_to "Blogs", blogs_path, class: "button secondary" %>    
+  </div>
+
+  <% if current_user.is_a?(User) %>
+  <%= link_to "Log ud", destroy_user_session_path, method: :delete, class: "button primary" %>
+  <% else %>
+  <%= link_to "Log ind", new_user_session_path, class: "button primary" %>
+  <% end %>
+
+  <div class="row">
+    <% if session[:source] %>
+    <p>Thanks for visiting me from <%= session[:source] %></p>
+    <% end %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <%= yield %>
+
+  </div>
+</body>
+</html>
