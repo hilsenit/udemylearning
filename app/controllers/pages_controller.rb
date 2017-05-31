@@ -1,14 +1,17 @@
 class PagesController < ApplicationController
-  def about
-
-  end
-
   def home
   	@posts = Blog.all
-  	@skills = Skill.all
+  	@page_title = "Mine blog posts "
+
   end
 
+  def about
+  	@page_title = "Om Hilsen IT"
+  end
+
+
   def contact
+  	@page_title = "Kontakt"
 
   end
 end
