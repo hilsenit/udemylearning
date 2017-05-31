@@ -11,4 +11,17 @@ module ApplicationHelper
 		  		 					class: "button primary") 
 		end
 	end
+
+
+	def source_helper(layout_name)
+		if session[:source]
+			greeting = 
+			"Thanks for visiting us from: #{session[:source]} "
+			controller_use = " Using #{layout_name} controller."
+			content_tag :p, greeting + "-" + controller_use, class: "callout succes"
+
+		end 
+	end
+
+
 end

@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title><%= @page_title %></title>
   <meta name="keywords" content="<%= @seo_keywords %>" />
   <%= stylesheet_link_tag    "blogs" %>
@@ -15,12 +14,11 @@
 
 <%= login_helper %>
   <div class="row">
+    <%= source_helper("blog") %>
 
-    <% if session[:source] %>
-    <p>Thanks for visiting me from <%= session[:source] %></p>
-    <% end %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
 
     <%= yield %>
 
