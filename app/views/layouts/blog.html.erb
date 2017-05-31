@@ -29,7 +29,7 @@
 
     <%= yield %>
 
-    <%= render partial: "shared/navbar" %>
+    <%= render partial: "shared/navbar", locals: {location: "bottom"} %>
 
   </div>
 </body>

@@ -12,8 +12,8 @@
 </head>
 
 <body>
-  <%= render partial: "shared/navbar" %>
-  
+  <%= render partial: "shared/navbar", locals: {location: "top"} %>
+
   <% if current_user.is_a?(User) %>
   <%= link_to "Log ud", destroy_user_session_path, method: :delete, class: "button primary" %>
   <% else %>
