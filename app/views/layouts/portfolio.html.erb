@@ -12,13 +12,12 @@
 </head>
 
 <body>
-<%= render partial: "shared/navbar", locals: {location: "middle"} %>
+  <%= render partial: "shared/navbar", locals: {location: "middle"} %>
 
-<%= login_helper %>
+  <%= login_helper %>
+
   <div class="row">
-    <% if session[:source] %>
-    <p>Thanks for visiting me from <%= session[:source] %></p>
-    <% end %>
+  
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
