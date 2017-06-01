@@ -9,10 +9,10 @@ class User < ApplicationRecord
   # Integrate third party login, forexample facebook or some other
   #:omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+  :recoverable, :rememberable, :trackable, :validatable
 
   # Vi skal bruge navnet, så vi er sikre på, at det blive skrevet i new
-  validates :name, presence: true
+  # validates :name, presence: true
 
   def first_name
     self.name.split.first
@@ -22,4 +22,5 @@ class User < ApplicationRecord
   def last_name
     self.name.split[1..-1].join(" ")
   end
+
 end
