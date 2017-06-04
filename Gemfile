@@ -48,6 +48,6 @@ group :development do
   gem 'spring'
 end
 
-gem 'view_tool_hilsen_it', git: "https://github.com/peterhoejlundandersen/view_tool_hilsen_it.git"
+gem 'view_tool_hilsen_it', git: "https://github.com/peterhoejlundandersen/view_tool_hilsen_it"
 
 gem 'petergate', '~> 1.7', '>= 1.7.5'

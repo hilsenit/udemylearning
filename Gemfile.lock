@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/peterhoejlundandersen/view_tool_hilsen_it
+  revision: 7314fe4bb826dc208d86b67255f11b356c622c25
+  specs:
+    view_tool_hilsen_it (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -90,6 +96,8 @@ GEM
     nokogiri (1.7.2)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
+    petergate (1.7.5)
+      activerecord (> 4.0.0)
     pg (0.20.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -180,6 +188,7 @@ DEPENDENCIES
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  petergate (~> 1.7, >= 1.7.5)
   pg (~> 0.15)
   pry-byebug
   rails (>= 5.0.0.rc2)
@@ -188,6 +197,7 @@ DEPENDENCIES
   spring
   turbolinks
   uglifier (>= 1.3.0)
+  view_tool_hilsen_it!
   web-console (~> 2.0)
 
 BUNDLED WITH
