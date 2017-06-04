@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get "angular-items" => "portfolios#angular", as: "angular_items"
   get "portfolio/:id" => "portfolios#show", as: "show_portfolio"
 
-  root "pages#home"
+  root "blogs#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

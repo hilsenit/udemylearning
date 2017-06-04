@@ -1,9 +1,9 @@
 class PagesController < ApplicationController
+  layout "portfolio"
   def home
   	@posts = Blog.all
   	@page_title = "Mine blog posts "
     @user = User.last
-
   end
 
   def about

@@ -1,5 +1,5 @@
 <h1>Portfolio items</h1>
-<%= link_to "Opret nyt item", new_portfolio_path, class: "button warning" %>
+<%= link_to("Opret nyt item", new_portfolio_path, class: "button warning") if logged_in?(:site_admin)%>
 
 <%= render partial: "portfolio_item", collection: @portfolio_items %>
 

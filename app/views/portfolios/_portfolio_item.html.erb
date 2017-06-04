@@ -2,6 +2,6 @@
 <p><strong><%= portfolio_item.title %></strong></p>
 <p><%= portfolio_item.subtitle %></p>
 <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
-<%= link_to "Rediger", edit_portfolio_path(portfolio_item) %>
-<%= link_to "Slet", portfolio_path(portfolio_item), method: :delete, data: { confirm: "Er du sikker?" } %>
+<%= link_to("Rediger", edit_portfolio_path(portfolio_item)) if logged_in?(:site_admin)  %>
+<%= link_to("Slet", portfolio_path(portfolio_item), method: :delete, data: { confirm: "Er du sikker?" }) if logged_in?(:site_admin) %>
 <% end %>
