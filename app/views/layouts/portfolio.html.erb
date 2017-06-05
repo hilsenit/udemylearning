@@ -12,21 +12,19 @@
 </head>
 
 <body>
-<div class="site-wrapper">
+  <div class="site-wrapper">
 
-  <div class="site-wrapper-inner">
+    <div class="site-wrapper-inner">
 
-    <div class="cover-container">
-  <%= render partial: "shared/navbar", locals: {location: "middle"} %>
-
-  <%= login_helper %>
-
-
+      <div class="cover-container">
+        <%= render partial: "shared/navbar", locals: {location: "middle"} %>
 
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
 
         <%= yield %>
+
+        <%= render partial: "shared/applicationfooter" %>
 
         <%= source_helper("portfolio") %>
       </div> <!-- cover-container -->

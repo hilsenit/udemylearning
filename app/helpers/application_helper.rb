@@ -1,14 +1,14 @@
 module ApplicationHelper
-	def login_helper
+	def login_helper(style)
 		if current_user.is_a?(GuestUser)
 			(link_to "Registrer", new_user_registration_path, 
-				class: "btn primary") +
+				class: style) +
 				(link_to "Log ind", new_user_session_path, 
-					class: "btn primary") 
+					class: style) 
 		else
 					link_to "Log ud", destroy_user_session_path, 
 					method: :delete, 
-					class: "btn primary"
+					class: style
 
 		end
 	end
@@ -24,5 +24,8 @@ module ApplicationHelper
 		end 
 	end
 
-
+	def copyright_generator
+		content = "<b>Hilsen it</b> &copy; #{Time.now.year}"
+		content_tag :div, content.html_safe
+	end
 end
