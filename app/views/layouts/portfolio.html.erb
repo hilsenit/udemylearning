@@ -12,19 +12,26 @@
 </head>
 
 <body>
+<div class="site-wrapper">
+
+  <div class="site-wrapper-inner">
+
+    <div class="cover-container">
   <%= render partial: "shared/navbar", locals: {location: "middle"} %>
 
   <%= login_helper %>
 
-  <div class="row">
-  
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
-    <%= yield %>
 
-    <%= source_helper("portfolio") %>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
 
-  </div>
+        <%= yield %>
+
+        <%= source_helper("portfolio") %>
+      </div> <!-- cover-container -->
+    </div> <!-- site-wrapper-inner -->
+  </div> <!-- site-wrapper -->
+
 </body>
 </html>

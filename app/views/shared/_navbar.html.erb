@@ -1,6 +1,14 @@
-<div class="<%= location %>">
-  <%= link_to "Home", root_path, class: "button secondary" %>
-  <%= link_to "Om", about_path, class: "button secondary" %>
-  <%= link_to "Kontakt", contact_path, class: "button secondary" %>
-  <%= link_to "Blogs", blogs_path, class: "button secondary" %>    
+
+<div class="masthead clearfix <%= location %>">
+  <div class="inner">
+    <h3 class="masthead-brand">Cover</h3>
+    <nav class="nav nav-masthead">
+      
+      <%= link_to "Home", root_path, class: "button secondary" %>
+      <%= link_to "Om", about_path, class: "button secondary" %>
+      <%= link_to "Kontakt", contact_path, class: "button secondary" %>
+      <%= link_to "Blogs", blogs_path, class: "button secondary" %>    
+    </nav>
+  </div>
 </div>
+  

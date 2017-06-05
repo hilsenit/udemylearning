@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   
   get "about" => "pages#about", as: "about"
   get "contact" => "pages#contact", as: "contact"
+  get "home" => "pages#home", as: "home"
 
   resources :blogs
   get ":id/change_status" => "blogs#toggle_status", as: "toggle_status"
@@ -13,7 +14,7 @@ Rails.application.routes.draw do
   get "angular-items" => "portfolios#angular", as: "angular_items"
   get "portfolio/:id" => "portfolios#show", as: "show_portfolio"
 
-  root "blogs#index"
+  root "pages#home"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
