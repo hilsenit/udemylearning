@@ -11,6 +11,10 @@ class Portfolio < ActiveRecord::Base
 		where(subtitle: "Angular")
 	end
 
+	def self.by_position
+		order(position: :asc)
+	end
+
 	# A portfolio items is initilized when Portfolio.new is called. 
 	after_initialize :set_default
 
