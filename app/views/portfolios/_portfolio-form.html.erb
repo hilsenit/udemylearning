@@ -1,26 +1,38 @@
 <%= form_for(portfolio_item) do |f| %>
+<div class="row">
+	<div class="col-md-6">
+		<div class="form-group">
+			<%= f.label :title %>
+			<%= f.text_field :title, class: "form-control" %>
+		</div>
+		<div class="form-group">
+			<%= f.label :subtitle %>
+			<%= f.text_field :subtitle, class: "form-control" %>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="form-group">
+			<%= f.label :body %>
+			<%= f.text_area :body, rows: 10, class: "form-control" %>
+		</div>
+	</div>
+</div><!-- row -->
+<div class="row">
+<div class="col-md-12">
+	<div class="form-group">
+		<%= f.label :main_image, "Tilføj billede" %>
+		<%= f.file_field :main_image, class: "form-control" %>
+	</div>
 
-<%= f.label :title %>
-<%= f.text_field :title %>
-
-<%= f.label :subtitle %>
-<%= f.text_field :subtitle %>
-
-<%= f.label :body %>
-<%= f.text_area :body %>
-
-<%= f.label :main_image, "Tilføj billede" %>
-<%= f.file_field :main_image %>
-
-<ul>
 	<%= f.fields_for :technologies do |tec_form| %> 
-		<li>
+	<div class="form-group">
 		<%= tec_form.label :name %>
-		<%= tec_form.text_field :name %>
-		</li>
+		<%= tec_form.text_field :name, class: "form-control" %>
+	</div>
 	<% end %>
-</ul>
-
-
-<%= f.submit "Tilføj", class: "button" %>
-<% end %>
+</div>
+</div>
+<div class="form-group">
+	<%= f.submit "Tilføj", class: "btn btn-primary btn-block" %>
+	<% end %>
+</div>

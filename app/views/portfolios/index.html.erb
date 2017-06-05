@@ -1,7 +1,11 @@
-<h1>Portfolio items</h1>
+
+
+    <div class="row">
+    <%= render @portfolio_items %>
+    </div>
+
 <%= link_to("Opret nyt item", new_portfolio_path, class: "button warning") if logged_in?(:site_admin)%>
 
-<%= render partial: "portfolio_item", collection: @portfolio_items %>
 
 
 

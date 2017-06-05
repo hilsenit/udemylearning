@@ -1,11 +1,33 @@
-<%= image_tag @portfolio_item.main_image %>
-<h2><%= @portfolio_item.title %></h2>
 
-<p><%= @portfolio_item.body %></p>
+<div class="row">
+<div class="col-md-5">
 
-<h2>Used Tech</h2>
+		<%= image_tag @portfolio_item.main_image %>
 
-<% @portfolio_item.technologies.each do |item| %>
-	<p><%= item.name %></p>
-<% end %>
-<%= link_to "Gå tilbage til oversigt", portfolios_path, class: "button primary" %>
+
+	</div>
+	<div class="col-md-7">
+
+		<h2><%= @portfolio_item.title %></h2>
+
+		<p><%= @portfolio_item.body %></p>
+
+		<h2>Used Tech</h2>
+
+		<% @portfolio_item.technologies.each do |item| %>
+		<p><%= item.name %></p>
+		<% end %>
+		<%= link_to "Rediger #{@portfolio_item.title}", edit_portfolio_path(@portfolio_item) if logged_in?(:site_admin) %>
+
+
+	</div>
+
+
+</div>
+<hr>
+<div class="row">
+<%= link_to "Gå tilbage til oversigt", portfolios_path, class: "btn btn-secondary" %>
+<%= link_to "Gå tilbage til oversigt", portfolios_path, class: "btn btn-secondary" %>
+	
+
+</div>

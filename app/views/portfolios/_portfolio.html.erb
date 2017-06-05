@@ -1,0 +1,7 @@
+<div class="card">
+<%= link_to show_portfolio_path(portfolio) do %> 
+	<h4><%= portfolio.title %></h4>
+	<%= image_tag portfolio.thumb_image, alt: "Card image cap"%>
+  <p class="card-text"><%= portfolio.subtitle %></p>
+<% end %>
+</div>

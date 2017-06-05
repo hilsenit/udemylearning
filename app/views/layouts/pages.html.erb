@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title><%= @page_title %></title>
+  <meta name="keywords" content="<%= @seo_keywords %>" />
+  <%= stylesheet_link_tag    "pages" %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+      <div class="cover-container">
+        <%= render partial: "shared/navbar", locals: {location: "middle"} %>
+
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+
+        <%= yield %>
+
+        <%= render partial: "shared/pagesfooter" %>
+
+        <%= source_helper("portfolio") %>
+      </div> <!-- cover-container -->
+    </div> <!-- site-wrapper-inner -->
+  </div> <!-- site-wrapper -->
+
+</body>
+</html>

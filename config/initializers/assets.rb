@@ -7,6 +7,7 @@ Rails.application.config.assets.version = '1.0'
 # For at få blogs.css til at blive komprimeret
 Rails.application.config.assets.precompile += %w( blogs.css )
 Rails.application.config.assets.precompile += %w( portfolios.css )
+Rails.application.config.assets.precompile += %w( pages.css )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 

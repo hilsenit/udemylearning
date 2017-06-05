@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
-  layout "portfolio"
+  layout "pages"
+  
   def home
   	@posts = Blog.all
   	@page_title = "Mine blog posts "

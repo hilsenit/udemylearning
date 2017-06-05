@@ -12,24 +12,22 @@
 </head>
 
 <body>
-  <div class="site-wrapper">
+  <%= render partial: "shared/portfolionavbar" %>
+  <%= render partial: "shared/portfoliomasthead" unless logged_in?(:site_admin) %>
 
-    <div class="site-wrapper-inner">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
-      <div class="cover-container">
-        <%= render partial: "shared/navbar", locals: {location: "middle"} %>
+  <div class="album text-muted">
+    <div class="container">
 
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+      <%= yield %>
+      
+    </div>
+  </div>
+  <%= render partial: "shared/portfoliofooter" %>
 
-        <%= yield %>
-
-        <%= render partial: "shared/applicationfooter" %>
-
-        <%= source_helper("portfolio") %>
-      </div> <!-- cover-container -->
-    </div> <!-- site-wrapper-inner -->
-  </div> <!-- site-wrapper -->
+  <%= source_helper("portfolio") %>
 
 </body>
 </html>
