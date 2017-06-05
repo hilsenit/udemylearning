@@ -37,7 +37,7 @@ module ApplicationHelper
 			},
 			{
 				url: about_path,
-				title: "About me"
+				title: "Om mig"
 			},
 			{
 				url: contact_path,
@@ -45,20 +45,20 @@ module ApplicationHelper
 			},
 			{
 				url: blogs_path,
-				title: "Blog"
+				title: "Blogs"
 			},
 			{
 				url: portfolios_path,
-				title: "Portfolios"
+				title: "Portfolie"
 			}
 		]
-			
 	end
 
-	def nav_helper style, tag_type
+	def nav_helper style, tag
 		nav_links = ""
-		nav_items.each do |item|
-			nav_links << "<#{tag_type}><a href='#{item[:url]}' class='#{style} #{active? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
+		nav_items.each do |item| 
+			nav_links << 
+			"<#{tag}><a href='#{item[:url]}' class='#{style} #{active? item[:url]}'>#{item[:title]}</a></#{tag}>"
 		end
 		nav_links.html_safe
 	end
