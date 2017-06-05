@@ -15,13 +15,13 @@
     <%= source_helper("blog") %>
 
     <%= render partial: "shared/blognavbar" %>
+    <%= render partial: "shared/blogmasthead" %>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
     <%= yield %>
 
-    <%= render partial: "shared/navbar", locals: {location: "bottom"} %>
-
+    <%= render partial: "shared/blogfooter" %>      
 </body>
 </html>

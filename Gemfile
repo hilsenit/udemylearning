@@ -53,3 +53,7 @@ gem 'view_tool_hilsen_it', git: "https://github.com/peterhoejlundandersen/view_t
 gem 'petergate', '~> 1.7', '>= 1.7.5'
 
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+
+gem 'font-awesome-rails'
+# For pagination
+gem 'kaminari', '~> 1.0', '>= 1.0.1'
