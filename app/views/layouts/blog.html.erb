@@ -12,18 +12,16 @@
 
 <body>
 
-<%= login_helper %>
-  <div class="row">
     <%= source_helper("blog") %>
+
+    <%= render partial: "shared/blognavbar" %>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
 
     <%= yield %>
 
     <%= render partial: "shared/navbar", locals: {location: "bottom"} %>
 
-  </div>
 </body>
 </html>

@@ -1,24 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Blogs</h1>
+<div class="blog-header">
+  <div class="container">
+    <h1 class="blog-title">Listing Blog</h1>
+    <p class="lead blog-description">All the examples.</p>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Blog title</th>
-      <th>Date</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <!-- Den nye syge måde at gøre det på! OMG! <3 RAILS -->
-    <!-- husk at din partial skal være ental! _blog.html.erb -->
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-sm-8 blog-main">
+
     <%= render @blogs %>
-  </tbody>
-</table>
 
-<br>
+    </div>
+    <%= render partial: "shared/blogsidebar" %>
+
+  </div>
+
+</div>
 
 <%= link_to 'New Blog', new_blog_path, class: "button primary" if logged_in?(:site_admin) %>

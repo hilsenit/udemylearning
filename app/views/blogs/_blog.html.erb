@@ -1,10 +1,15 @@
-<tr>
-  <td><%= blog.title.upcase %></td>
-  <td>Published: <%= distance_of_time_in_words(blog.created_at, Time.now) %></td>
-  <td><%= blog.body %></td>
-  <td><%= blog.published? ? "Udgivet" : "Kladde" if logged_in?(:site_admin) %></td>
-  <td class="button secondary"><%= link_to('Ændre status', toggle_status_path(blog)) if logged_in?(:site_admin) %></td>
-  <td class="button secondary"><%= link_to('Show', blog) if logged_in?(:site_admin) %></td>
-  <td class="button secondary"><%= link_to('Edit', edit_blog_path(blog)) if logged_in?(:site_admin) %></td>
-  <td class="button secondary"><%= link_to('Delete post', blog, method: :delete, data: { confirm: 'Are you sure?' }) if logged_in?(:site_admin) %></td>
-</tr>
+	<div class="blog-post">
+
+		<h2 class="blog-post-title"><%= blog.title %></h2>
+
+		<p class="blog-post-meta">Udgivet: 
+		<%= distance_of_time_in_words(blog.created_at, Time.now) %></p>
+		<p><%= blog.body %></p>
+		<p><%= blog.published? ? "Udgivet" : "Kladde" if logged_in?(:site_admin) %></p>
+		<p class="btn"><%= link_to('Ændre status', toggle_status_path(blog)) if logged_in?(:site_admin) %></p>
+		<p class="btn"><%= link_to('Show', blog) if logged_in?(:site_admin) %></p>
+		<p class="btn"><%= link_to('Edit', edit_blog_path(blog)) if logged_in?(:site_admin) %></p>
+		<p class="btn"><%= link_to('Delete post', blog, method: :delete, data: { confirm: 'Are you sure?' }) if logged_in?(:site_admin) %></p>
+
+
+	</div><!-- /.blog-post -->
