@@ -97,6 +97,7 @@ body {
   border-bottom-color: #fff;
 }
 
+
 @media (min-width: 48em) {
   .masthead-brand {
     float: left;
@@ -161,4 +162,8 @@ body {
   .cover-container {
     width: 55rem;
   }
+}
+
+.nav-masthead .nav-link{
+  padding: 10px 15px 10px 15px;
 }

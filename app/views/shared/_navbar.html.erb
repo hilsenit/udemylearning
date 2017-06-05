@@ -2,15 +2,10 @@
 <div class="masthead clearfix <%= location %>">
   <div class="inner">
     <h3 class="masthead-brand">Hilsen IT</h3>
-    <nav class="nav nav-masthead">
-      
-      <%= link_to "Home", root_path, class: "nav-link active" %>
-      <%= link_to "Om", about_path, class: "nav-link" %>
-      <%= link_to "Kontakt", contact_path, class: "nav-link" %>
-      <%= link_to "Blogs", blogs_path, class: "nav-link" %> 
+      <nav class="nav nav-masthead">
+      <%= nav_helper("nav-link", "div") %>    
       <%= login_helper("nav-link") %>
-   
-    </nav>
+      </nav>
   </div>
 </div>
   

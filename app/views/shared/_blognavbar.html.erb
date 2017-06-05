@@ -1,11 +1,8 @@
 <div class="blog-masthead">
   <div class="container">
     <nav class="nav blog-nav">
-      <%= link_to "Hjem", root_path, class: "nav-link" %>
-      <%= link_to "Kontakt", contact_path, class: "nav-link" %>
-      <%= link_to "Om mig", about_path, class: "nav-link" %>
-      <%= link_to "Portfolieside", portfolios_path, class: "nav-link" %>
-      <%= login_helper("nav-link") %>
+	    <%= nav_helper("nav-link", "div") %>
+	    <%= login_helper("nav-link") %>
     </nav>
   </div>
 </div>
