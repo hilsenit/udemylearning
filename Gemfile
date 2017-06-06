@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 gem 'friendly_id', '~> 5.1.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '>= 5.0.0.rc2'
@@ -65,4 +67,3 @@ gem 'carrierwave', '~> 1.1'
 gem 'mini_magick', '~> 4.7'
 gem 'carrierwave-aws', '~> 1.1'
 #Security
-gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
