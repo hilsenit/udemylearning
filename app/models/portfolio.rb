@@ -1,6 +1,7 @@
 class Portfolio < ActiveRecord::Base
 	include Placeholder
-
+	mount_uploader :main_image, PortfolioUploader
+	
 	has_many :technologies
 	accepts_nested_attributes_for :technologies,
 									reject_if: lambda { |attr| attr["name"].blank? }
