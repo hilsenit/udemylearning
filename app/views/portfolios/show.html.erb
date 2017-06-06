@@ -2,8 +2,7 @@
 <div class="row">
 	<div class="col-md-5">
 
-		<%= image_tag @portfolio_item.main_image %>
-
+		<%= image_tag @portfolio_item.main_image, id: "mainImage"%>
 
 	</div>
 	<div class="col-md-7 text-left">
@@ -17,6 +16,7 @@
 		<% @portfolio_item.technologies.each do |item| %>
 		<p><%= item.name %></p>
 		<% end %>
+
 		<%= link_to "Rediger", edit_portfolio_path(@portfolio_item), class: "btn btn-primary" if logged_in?(:site_admin) %>
 
 
